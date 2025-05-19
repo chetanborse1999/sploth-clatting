@@ -338,16 +338,16 @@ class ResidualMeshSimulator(torch.nn.Module):
             self.n_times = n_times
         else:
             self.n_times = self.mesh_predictions.shape[0]
-<<<<<<< HEAD
+# <<<<<<< HEAD
 
-        self.time_delta = 1.0 / (self.n_times - 1)
-=======
+        # self.time_delta = 1.0 / (self.n_times - 1)
+# =======
         
         if self.n_times == 1:
             self.time_delta = 1.0
         else:
             self.time_delta = 1.0 / (self.n_times - 1)
->>>>>>> 9b63d7a (Commit minor changes)
+# >>>>>>> 9b63d7a (Commit minor changes)
 
         n_nodes = self.mesh_predictions.shape[1]
 
