@@ -26,8 +26,8 @@ for SCENE in "scene_1"
 do
     EXP="${EXPNAME}/${SCENE}"
     DATA=data/folding_scenes/${SCENE}
-    # python3 train.py -s ${DATA} --expname "${EXP}" --configs arguments/cloth_splatting/default.py --view_skip 3 --iterations 6000
-    python3 train.py -s ${DATA} --expname "${EXP}" --configs arguments/cloth_splatting/default.py --view_skip 3 --iterations 4000
+    python3 train.py -s ${DATA} --expname "${EXP}" --configs arguments/cloth_splatting/default.py --view_skip 3 --iterations 6000
+    # python3 train.py -s ${DATA} --expname "${EXP}" --configs arguments/cloth_splatting/default.py --view_skip 3 --iterations 4000
     python3 render.py -s ${DATA} --model_path "output/${EXP}" \
       --configs "arguments/cloth_splatting/default.py"  --meshnet_path "output/${EXP}/meshnet"\
       --show_flow --log_deform --track_vertices --skip_train --skip_video --iteration ${TEST_ITER} --flow_skip 2
